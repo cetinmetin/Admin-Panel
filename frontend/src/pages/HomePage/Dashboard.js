@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 
-const Dashboard = ({ auth: { user } }) => {
+const Dashboard = ({ user }) => {
   const [userDetail, setUserDetail] = useState(false);
 
   return (
@@ -26,7 +26,7 @@ const Dashboard = ({ auth: { user } }) => {
 };
 
 const mapStateToProps = state => ({
-  auth: state.auth,
+  user: state.auth.user,
 });
 
 export default connect(mapStateToProps)(Dashboard);
