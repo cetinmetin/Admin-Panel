@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use("/users", require("./routes/auth"));
+app.use("/products", require("./routes/product"));
 
 app.listen(
   PORT,
