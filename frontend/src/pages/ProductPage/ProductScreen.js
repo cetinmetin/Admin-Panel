@@ -58,7 +58,7 @@ const ProductScreen = ({ products, loadProduct, addProduct, deleteProduct, updat
         }
     }
     if (isLoading) {
-        return <div className="App">Loading...</div>;
+        return <div className="App" style={styles.loading}>Loading...</div>;
     }
     return (
         <div style={styles.container}>
@@ -187,7 +187,8 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps, { loadProduct, addProduct, deleteProduct, updateProduct })(ProductScreen);
 
 const styles = {
-    container: { margin: "auto", width: "fit-content", backgroundColor: "white", marginTop: "2%" }
+    container: { margin: "auto", width: "fit-content", backgroundColor: "white", marginTop: "2%" },
+    loading: { margin: "auto", width: "fit-content", marginTop: "12%", fontSize: 24, fontWeight:"bold" }
 };
 
 
