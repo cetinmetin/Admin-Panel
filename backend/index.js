@@ -19,6 +19,7 @@ app.use(bodyParser.json());
 
 app.use("/users", require("./routes/auth"));
 app.use("/products", require("./routes/product"));
+app.use("/companies", require("./routes/company"));
 
 app.listen(
   PORT,
